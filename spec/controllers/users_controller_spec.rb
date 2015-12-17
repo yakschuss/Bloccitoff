@@ -1,19 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
-  let(:user) {User.create!(email: "email@email.com", password: "password")}
 
-  describe "GET #show" do
-    it "returns http success" do
-      get :show, id: user.id
-      expect(response).to have_http_status(:success)
-    end
-  end
+RSpec.describe UsersController, type: :controller do
+  let(:user) {create(:user)}
+
 
   it "should return http status success after user signs in" do
-    pending "write code"
+    pending "expect(response).to have_http_status :success"
   end
 
+  it "should set current_user variable" do
+    pending "current_user.should_not be_nil"
+  end
+
+  it "should redirect to user#show" do
+    pending "expect(response).to redirect_to(user_show_path)"
+  end
 
 
 
