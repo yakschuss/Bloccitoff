@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+@import "users";
+@import "welcome";
+
+body {
+    padding-top: 65px;
+}
+
+.navbar-custom {
+    color: #FFFFFF;
+    background-color: #000000;
+    border-style: none;
+
+}
+
+.nav-title{
+    float: left !important;
+    margin-left: -15px;
+    padding-top: 10px;
+}
