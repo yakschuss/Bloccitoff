@@ -1,0 +1,59 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/welcome_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1450454190
+  }
+}
