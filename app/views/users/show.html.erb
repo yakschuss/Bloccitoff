@@ -11,19 +11,15 @@
       <div class="media-body">
         <h2 class="media-heading"><%= @user.first_name %> <%= @user.last_name %></h2>
         <small>
-          <%= pluralize(@user.items.count, 'item') %>
+          <%= pluralize(@user.items.count, 'task') %>
         </small>
         <%= render partial: "items/form", locals: {user: @user} %>
       </div>
-      <% @user.items.each do |item| %>
+
         <div class="media">
-          <%= render partial: 'items/item', locals: { item: item } %>
-            <small>
-            submitted <%= time_ago_in_words(item.created_at) %> ago by <%= item.user.first_name %> <br>
-            <%= @user.items.count %> Tasks Left
-          </small>
+          <%= render partial: 'items/item', locals: {user: @user}%>
         </div>
-      <% end %>
+
     </div>
   </div>
 </div>
