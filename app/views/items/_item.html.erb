@@ -4,7 +4,7 @@
     <div class="listing">
       <div class="list-delete"><%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok' %></div>
        <li class="list-group-item"><span class="badge"><%= item.created_at.nil? ? "sometime" : time_ago_in_words(item.created_at) %> ago </span><%= item.name %></li>
-   </div>
+     </div>
   <% end %>
   </div>
 </div>

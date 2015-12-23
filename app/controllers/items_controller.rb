@@ -15,6 +15,17 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
+    @item = @user.items.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "Done!"
+      redirect_to user_path(@user)
+    else
+      flash[:error] = "woops, try again"
+      redirect_to user_path(@user)
+    end
+
   end
 
 
