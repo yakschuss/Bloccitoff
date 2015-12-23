@@ -1,0 +1,15 @@
+<div class="media">
+  <div class="media-body">
+    <% @user.items.each do |item| %>
+    <h4> <%= item.name %> </h4>
+    <small>
+    started
+    <%= item.created_at.nil? ? "sometime" : time_ago_in_words(item.created_at) %>
+     ago by
+     <%= item.user.first_name %>
+     <br>
+    <%= user.items.count %> Tasks Left
+    </small>
+    <% end %>
+  </div>
+</div>
