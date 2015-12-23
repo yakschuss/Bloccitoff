@@ -3,6 +3,7 @@
     "coverage": {
       "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/models/user.rb": [
         1,
+        1,
         null,
         null,
         1,
@@ -10,6 +11,14 @@
         null
       ],
       "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/helpers/items_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/helpers/registrations_helper.rb": [
         1,
         null
       ],
@@ -21,10 +30,31 @@
         1,
         null
       ],
-      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/users_controller.rb": [
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/items_controller.rb": [
         1,
+        null,
         1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
         1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -41,6 +71,28 @@
         null,
         null
       ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/registrations_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/users_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/controllers/welcome_controller.rb": [
         1,
         null,
@@ -52,8 +104,13 @@
         null,
         null,
         null
+      ],
+      "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/models/item.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1450454190
+    "timestamp": 1450830625
   }
 }

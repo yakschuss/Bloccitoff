@@ -10,14 +10,19 @@
 
       <div class="media-body">
         <h2 class="media-heading"><%= @user.first_name %> <%= @user.last_name %></h2>
-        <small>
-          <%= pluralize(@user.items.count, 'task') %>
-        </small>
+        <br>
+        <h3>
+          <%= pluralize(@user.items.count, 'task') %> left
+        </h3>
+        <br>
         <%= render partial: "items/form", locals: {user: @user} %>
       </div>
+      <br>
 
         <div class="media">
+          <ul class="list-group">
           <%= render partial: 'items/item', locals: {user: @user}%>
+          </ul>
         </div>
 
     </div>
