@@ -3,6 +3,6 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:user) {create(:user)}
 
-  it { should have_many(:items) }
+  #it {  have_many(:items) }
 
 end

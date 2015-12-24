@@ -48,6 +48,17 @@
         null,
         null,
         1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
         null,
         null,
         null,
@@ -108,9 +119,15 @@
       "/Users/jackschuss/Sites/bloc/code/Bloccitoff/app/models/item.rb": [
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1450830625
+    "timestamp": 1450988229
   }
 }
