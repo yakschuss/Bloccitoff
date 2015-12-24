@@ -15,7 +15,7 @@
           <%= pluralize(@user.items.count, 'task') %> left
         </h3>
         <br>
-        <%= render partial: "items/form", locals: {user: @user} %>
+        <%= render partial: "items/form", locals: {user: @user, item: Item.new} %>
       </div>
       <br>
 
