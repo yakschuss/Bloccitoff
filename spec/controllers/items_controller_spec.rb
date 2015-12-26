@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe ItemsController, type: :controller do
 
 
-  let(:my_user) {create(:example_user)}
-  let(:my_item) {create(:item)}
-
+  let(:confirmed_user) {create(:example_user, confirmed_at: Time.now)}
+  let(:my_item) {create(:item, user: confirmed_user)}
+  let(:unconfirmed_user) {create(:example_user)}
 
 =begin
   context "guest" do
@@ -27,12 +27,14 @@ RSpec.describe ItemsController, type: :controller do
 
   context "signed-in example_user doing CD on a comment they own" do
     before do
-    #  log-in the example_user
+      sign_in confirmed_user
     end
 
     describe "POST create" do
       it "increase the number of items by 1" do
-        expect {post :create, item: {name:"This is a test", user_id: my_user.id} }.to change(Item, :count).by(1)
+        Rails.logger.info "------*********--------"
+        Rails.logger.info "#{my_item.inspect}"
+        expect {post :create, user_id: confirmed_user.id, item: {name:"This is a test"} }.to change(Item, :count).by(1)
       end
 
       it "returns http success" do
