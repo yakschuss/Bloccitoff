@@ -38,21 +38,21 @@ RSpec.describe ItemsController, type: :controller do
       end
 
       it "returns http success" do
-        post :create, item: {name: "This is a test", user_id: my_user.id}
-        expect(response).to have_http_status(:success)
+        post :create, user_id: confirmed_user.id, item: {name: "This is a test"}
+        expect(response).to have_http_status(:redirect)
       end
     end
 
     describe "DELETE destroy" do
       it "deletes the item" do
-        delete :destroy, user_id: my_user.id, id: my_item.id
+        delete :destroy, user_id: confirmed_user.id, id: my_item.id
         count = Item.where({id: my_item.id}).count
         expect(count).to eq 0
       end
 
       it "returns http success" do
-        delete :destroy, user_id: my_user.id, id: my_item.id
-        expect(response).to have_http_status(:success)
+        delete :destroy, user_id: confirmed_user.id, id: my_item.id
+        expect(response).to have_http_status(:redirect)
       end
     end
   end
