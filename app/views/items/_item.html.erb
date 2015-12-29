@@ -1,9 +1,10 @@
     <% @user.items.each do |item| %>
+    <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
         <div class="delete-item col-lg-1">
-            <%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
+            <%= link_to "", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
         </div>
        <li class="list-group-item col-lg-11">
-           <div class="created-at-time badge col-lg-2">
+           <div class="created-at-time badge col-lg-3">
                 <%= item.created_at.nil? ? "sometime" : time_ago_in_words(item.created_at) %> ago
            </div>
 
@@ -13,3 +14,4 @@
 
         </li>
     <% end %>
+  <% end %>

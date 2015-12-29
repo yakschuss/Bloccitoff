@@ -32,27 +32,25 @@ RSpec.describe ItemsController, type: :controller do
 
     describe "POST create" do
       it "increase the number of items by 1" do
-        Rails.logger.info "------*********--------"
-        Rails.logger.info "#{my_item.inspect}"
-        expect {post :create, user_id: confirmed_user.id, item: {name:"This is a test"} }.to change(Item, :count).by(1)
+        expect {post :create, format: :js, user_id: confirmed_user.id, item: {name:"This is a test"} }.to change(Item, :count).by(1)
       end
 
-      it "returns http success" do
+      it "returns http redirect" do
         post :create, user_id: confirmed_user.id, item: {name: "This is a test"}
-        expect(response).to have_http_status(:redirect)
+        expect(response).to have_http_status(:success)
       end
     end
 
     describe "DELETE destroy" do
       it "deletes the item" do
-        delete :destroy, user_id: confirmed_user.id, id: my_item.id
+        delete :destroy, format: :js, user_id: confirmed_user.id, id: my_item.id
         count = Item.where({id: my_item.id}).count
         expect(count).to eq 0
       end
 
       it "returns http success" do
-        delete :destroy, user_id: confirmed_user.id, id: my_item.id
-        expect(response).to have_http_status(:redirect)
+        delete :destroy, format: :js, user_id: confirmed_user.id, id: my_item.id
+        expect(response).to have_http_status(:success)
       end
     end
   end

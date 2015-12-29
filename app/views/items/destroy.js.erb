@@ -1,0 +1,3 @@
+$('#item-' +<%= @item.id %>).hide();
+
+$('.js-items-count').html("<%= pluralize(@item.user.items.count, 'task') %> left");

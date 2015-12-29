@@ -3,13 +3,19 @@ class ItemsController < ApplicationController
   def create
     @user = current_user
     @item = @user.items.new(item_params)
+    @new_item = Item.new
 
     if @item.save
       flash[:notice] = "Your item was saved correctly"
-      redirect_to user_path(@user)
+
     else
       flash[:error] = "oops, something didn't work there."
-      redirect_to user_path(@user)
+
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
 
   end
@@ -20,11 +26,16 @@ class ItemsController < ApplicationController
 
     if @item.destroy
       flash[:notice] = "Done!"
-      redirect_to user_path(@user)
+
     else
       flash[:error] = "woops, try again"
-      redirect_to user_path(@user)
+
     end
+
+    respond_to do |format|
+       format.html
+       format.js
+     end
 
   end
 
