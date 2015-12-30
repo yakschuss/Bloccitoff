@@ -1,15 +1,15 @@
-<div class="media">
-  <div class="media-body">
     <% @user.items.each do |item| %>
-    <h4> <%= item.name %> </h4>
-    <small>
-    started
-    <%= item.created_at.nil? ? "sometime" : time_ago_in_words(item.created_at) %>
-     ago by
-     <%= item.user.first_name %>
-     <br>
-    <%= user.items.count %> Tasks Left
-    </small>
+        <div class="delete-item col-lg-1">
+            <%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok' %>
+        </div>
+       <li class="list-group-item col-lg-11">
+           <div class="created-at-time badge col-lg-2">
+                <%= item.created_at.nil? ? "sometime" : time_ago_in_words(item.created_at) %> ago
+           </div>
+
+           <div class="item-name col-lg-2">
+               <%= item.name %>
+           </div>
+
+        </li>
     <% end %>
-  </div>
-</div>
