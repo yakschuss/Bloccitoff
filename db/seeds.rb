@@ -7,13 +7,16 @@ users = User.all
 
  else
      until users.count == 5
-     User.create!(
+    u =  User.create!(
      first_name: Faker::Name.first_name,
      last_name: Faker::Name.last_name,
      email: Faker::Internet.email,
-     password: "password"
+     password: "password",
+     password_confirmation: 'password',
+     confirmed_at: Time.now,
      )
-    end
+     u.skip_confirmation!
+     end
 
 end
 
