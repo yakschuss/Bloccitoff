@@ -1,0 +1,3 @@
+$('.js-items').prepend("<%= escape_javascript(render partial: 'items/item', locals: {item: @item}) %>");
+$('.new-item').html("<%= escape_javascript(render partial: 'items/form', locals: {user: @user, item: @new_item}) %>");
+$('.js-items-count').html("<%= pluralize(@item.user.items.count, 'task') %> left");
