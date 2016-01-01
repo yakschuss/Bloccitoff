@@ -6,6 +6,7 @@ require 'faker'
 users = User.all
 
 (users.count+1).upto(5) do
+    #another possible method for idempotency
     # (users.count..5).each do
     u =  User.create!(
         first_name: Faker::Name.first_name,

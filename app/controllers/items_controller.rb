@@ -7,10 +7,8 @@ class ItemsController < ApplicationController
 
     if @item.save
       flash[:notice] = "Your item was saved correctly"
-
     else
       flash[:error] = "oops, something didn't work there."
-
     end
 
     respond_to do |format|
@@ -26,10 +24,8 @@ class ItemsController < ApplicationController
 
     if @item.destroy
       flash[:notice] = "Done!"
-
     else
       flash[:error] = "woops, try again"
-
     end
 
     respond_to do |format|

@@ -5,25 +5,7 @@ RSpec.describe ItemsController, type: :controller do
 
   let(:confirmed_user) {create(:example_user, confirmed_at: Time.now)}
   let(:my_item) {create(:item, user: confirmed_user)}
-  let(:unconfirmed_user) {create(:example_user)}
 
-=begin
-  context "guest" do
-    describe "POST create" do
-      it "redirects the example_user to the sign in view" do
-        post :create
-        expect(response).to redirect_to(new_session_path)
-    end
-  end
-
-    describe "DELETE destroy" do
-      it "redirects the example_user to the sign in view" do
-        delete :destroy
-        expect(response).to redirect_to(new_session_path)
-      end
-    end
-  end
-=end
 
   context "signed-in example_user doing CD on a comment they own" do
     before do
@@ -36,7 +18,7 @@ RSpec.describe ItemsController, type: :controller do
       end
 
       it "returns http redirect" do
-        post :create, user_id: confirmed_user.id, item: {name: "This is a test"}
+        post :create, format: :js, user_id: confirmed_user.id, item: {name: "This is a test"}
         expect(response).to have_http_status(:success)
       end
     end
