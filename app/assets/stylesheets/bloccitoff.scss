@@ -11,7 +11,7 @@ body {
 
 .navbar-custom {
     color: #FFFFFF;
-    background-color: #000000;
+    background-color: #5cb85c;
     border-style: none;
 
 }
@@ -20,4 +20,12 @@ body {
     float: left !important;
     margin-left: -15px;
     padding-top: 10px;
+}
+
+.navbar-nav > li > a{
+    color: #ffffff !important;
+}
+
+.navbar-nav > li > a:hover{
+    color: #9d9d9d !important;
 }
